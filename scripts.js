@@ -84,6 +84,9 @@ function printResults() {
     printHeader.innerHTML = `<h2>Location: ${location}</h2><h2>Total Annual Cost: $${totalAnnualCost}</h2>`;
     document.body.insertBefore(printHeader, document.body.firstChild);
 
+    // Make sure results are visible for print
+    document.getElementById('results').classList.remove('hidden');
+
     window.print();
 
     document.body.removeChild(printHeader);
