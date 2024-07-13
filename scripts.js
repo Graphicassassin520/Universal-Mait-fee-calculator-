@@ -76,7 +76,17 @@ function calculateFees() {
 }
 
 function printResults() {
+    const location = document.getElementById('location').value;
+    const totalAnnualCost = document.getElementById('totalAnnualCost').innerText;
+
+    const printHeader = document.createElement('div');
+    printHeader.id = 'print-header';
+    printHeader.innerHTML = `<h2>Location: ${location}</h2><h2>Total Annual Cost: $${totalAnnualCost}</h2>`;
+    document.body.insertBefore(printHeader, document.body.firstChild);
+
     window.print();
+
+    document.body.removeChild(printHeader);
 }
 
 function showError(elementId, message) {
