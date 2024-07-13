@@ -1,3 +1,4 @@
+/* Existing CSS */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -106,5 +107,42 @@ thead {
 
     input {
         padding: 12px;
+    }
+}
+
+/* Print-specific styles */
+@media print {
+    body {
+        background-color: #fff;
+    }
+
+    .calculator-container, form, button {
+        display: none;
+    }
+
+    #results {
+        display: block;
+        text-align: left;
+        padding: 0;
+    }
+
+    #results h2 {
+        text-align: left;
+    }
+
+    #resultTable {
+        margin-top: 20px;
+        width: 100%;
+        border: 1px solid #000;
+    }
+
+    #resultTable th, #resultTable td {
+        border: 1px solid #000;
+        padding: 4px;
+    }
+
+    #print-header {
+        display: block;
+        margin-bottom: 20px;
     }
 }
