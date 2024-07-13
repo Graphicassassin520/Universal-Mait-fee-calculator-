@@ -116,7 +116,7 @@ thead {
         background-color: #fff;
     }
 
-    .calculator-container, form, button {
+    .calculator-container, form, .print-button {
         display: none;
     }
 
